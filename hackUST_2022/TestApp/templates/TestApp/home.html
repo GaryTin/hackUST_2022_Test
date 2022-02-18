@@ -1,0 +1,13 @@
+{% extends 'TestApp/base/base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+    Gary's Home
+{% endblock %}
+
+{% block body %}
+    <h1 >This is my fucking home!</h1>
+    <a href="{% url 'toilet' %}" class="btn">Toilet</a>
+{% endblock %}
