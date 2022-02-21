@@ -8,6 +8,13 @@
 {% endblock %}
 
 {% block body %}
-    <h1 >This is my fucking home!</h1>
+    <h1>This is my fucking home!</h1>
     <a href="{% url 'toilet' %}" class="btn">Toilet</a>
+    <ol>
+        {% for people in peoples %}
+            {% include 'TestApp/includes/people_detail.html' with name=people.name email=people.email age=people.age school=people.school slug=people.slug image=people.image.url%}
+        {% endfor %}
+
+    </ol>
+
 {% endblock %}
