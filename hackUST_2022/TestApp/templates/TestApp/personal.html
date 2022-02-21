@@ -8,7 +8,12 @@
 {% endblock %}
 
 {% block body %}
-    <h1 >Say hi to {{selected_people.name}}</h1>
+    {% if people_found %}
+        <h1 >Say hi to {{selected_people.name}}</h1>
+    {% else %}
+        <h1 >Who the fuck u wanna find</h1>
+    {% endif %}
+
 
 
 {% endblock %}

@@ -16,5 +16,16 @@
         {% endfor %}
 
     </ol>
+    <h2>New comer? come over here :) Join us for free candy.</h2>
+
+    <form action="{% url 'home' %}" method="POST" enctype='multipart/form-data'>
+        {% csrf_token %}
+        <ul>
+           {{ prform.as_ul }}
+        </ul>
+        <div id="registration-action">
+            <button>Submit</button>
+        </div>
+    </form>
 
 {% endblock %}
